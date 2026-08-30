@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../../auth/context/AuthContext';
 import { Store, Plus } from 'lucide-react';
-import Button from '../components/common/Button';
+import Button from '../../../shared/components/Button';
 
 const MyProducts = () => {
   const { user } = useAuth();

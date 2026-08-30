@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Search, Filter } from 'lucide-react';
-import Button from '../components/common/Button';
+import Button from '../../../shared/components/Button';
 
 const Marketplace = () => {
   // Placeholder for marketplace products

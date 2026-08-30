@@ -1,8 +1,8 @@
 import { Building, FileText, MapPin, ShieldCheck, ArrowLeft, CheckCircle, PackageCheck } from 'lucide-react';
-import InputField from '../common/InputField';
-import SelectField from '../common/SelectField';
-import MultiSelectTags from '../common/MultiSelectTags';
-import Button from '../common/Button';
+import InputField from '../../shared/components/InputField';
+import SelectField from '../../shared/components/SelectField';
+import MultiSelectTags from '../../shared/components/MultiSelectTags';
+import Button from '../../shared/components/Button';
 
 const businessTypeOptions = [
   { value: 'Wholesaler', label: 'Wholesaler / Bulk Trader (थोक व्यापारी)' },

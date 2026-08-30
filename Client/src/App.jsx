@@ -1,11 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from './context/AuthContext';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Dashboard from './pages/Dashboard';
-import Marketplace from './pages/Marketplace';
-import MyProducts from './pages/MyProducts';
-import DashboardLayout from './layouts/DashboardLayout';
+import { useAuth } from './features/auth/context/AuthContext';
+import Login from './features/auth/pages/Login';
+import Signup from './features/auth/pages/Signup';
+import ProfileDashboard from './features/shared/pages/ProfileDashboard';
+import Marketplace from './features/buyer/marketplace/pages/Marketplace';
+import MyProducts from './features/farmer/products/pages/MyProducts';
+import DashboardLayout from './features/shared/layouts/DashboardLayout';
 import './App.css';
 
 // Protected Route Wrapper
@@ -28,7 +28,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       
       {/* Landing Route - Redirects to Dashboard if logged in */}
-      <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Dashboard />} />
+      <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" /> : <ProfileDashboard />} />
 
       {/* Protected Dashboard Routes */}
       <Route 
@@ -39,7 +39,7 @@ function App() {
           </ProtectedRoute>
         }
       >
-        <Route index element={<Dashboard />} />
+        <Route index element={<ProfileDashboard />} />
         <Route path="marketplace" element={<Marketplace />} />
         <Route path="my-products" element={<MyProducts />} />
       </Route>

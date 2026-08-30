@@ -14,8 +14,8 @@ import {
   FileText,
   Clock,
 } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
-import Button from '../components/common/Button';
+import { useAuth } from '../../auth/context/AuthContext';
+import Button from '../components/Button';
 
 const Dashboard = () => {
   const { user, isAuthenticated, logout } = useAuth();

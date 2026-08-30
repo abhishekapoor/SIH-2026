@@ -1,7 +1,7 @@
 import { User, Mail, Phone, Lock, ArrowRight } from 'lucide-react';
-import InputField from '../common/InputField';
+import InputField from '../../shared/components/InputField';
 import RoleSelector from './RoleSelector';
-import Button from '../common/Button';
+import Button from '../../shared/components/Button';
 
 const BasicDetailsForm = ({
   formData,

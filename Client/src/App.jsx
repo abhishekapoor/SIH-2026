@@ -1,79 +1,79 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './features/auth/context/AuthContext';
+
+// Public Pages (Friend's additions)
+import Landing from './features/public/pages/Landing';
+import PublicMarketplace from './features/public/pages/PublicMarketplace';
+import MandiLive from './features/public/pages/MandiLive';
+import Schemes from './features/public/pages/Schemes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTopAndHash from './components/ScrollToTopAndHash';
-import Home from './pages/Home';
-import Marketplace from './pages/Marketplace';
-import MandiLive from './pages/MandiLive';
-import Schemes from './pages/Schemes';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-=======
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-import { Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Home from './pages/Home';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+
+// Auth
+import Login from './features/auth/pages/Login';
+import Signup from './features/auth/pages/Signup';
+
+// Dashboard
+import ProfileDashboard from './features/shared/pages/ProfileDashboard';
+import Marketplace from './features/buyer/marketplace/pages/Marketplace';
+import MyProducts from './features/farmer/products/pages/MyProducts';
+import DashboardLayout from './features/shared/layouts/DashboardLayout';
+
 import './App.css';
 
+// Protected Route Wrapper
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) return <div>Loading...</div>;
+  if (!isAuthenticated) return <Navigate to="/login" />;
+  
+  return children;
+};
+
+// Layout for public pages
+const PublicLayout = ({ children }) => (
+  <div className="app-container">
+    <ScrollToTopAndHash />
+    <Navbar />
+    <main className="main-content">
+      {children}
+    </main>
+    <Footer />
+  </div>
+);
+
 function App() {
+  const { isAuthenticated } = useAuth();
+
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Router>
-      <ScrollToTopAndHash />
-      <div className="app-container">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/marketplace" element={<Marketplace />} />
-            <Route path="/mandi" element={<MandiLive />} />
-            <Route path="/schemes" element={<Schemes />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-=======
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-    <AuthProvider>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </div>
-    </AuthProvider>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
-=======
->>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+    <Routes>
+      {/* Public Routes with Navbar/Footer */}
+      <Route path="/" element={<PublicLayout><Landing /></PublicLayout>} />
+      <Route path="/marketplace" element={<PublicLayout><PublicMarketplace /></PublicLayout>} />
+      <Route path="/mandi" element={<PublicLayout><MandiLive /></PublicLayout>} />
+      <Route path="/schemes" element={<PublicLayout><Schemes /></PublicLayout>} />
+      
+      {/* Auth */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      
+      {/* Protected Dashboard Routes */}
+      <Route 
+        path="/dashboard" 
+        element={
+          <ProtectedRoute>
+            <DashboardLayout />
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<ProfileDashboard />} />
+        <Route path="marketplace" element={<Marketplace />} />
+        <Route path="my-products" element={<MyProducts />} />
+      </Route>
+    </Routes>
   );
 }
 

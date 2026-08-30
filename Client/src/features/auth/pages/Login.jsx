@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Mail, Lock, LogIn, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import AuthCard from '../components/auth/AuthCard';
-import InputField from '../components/common/InputField';
-import Button from '../components/common/Button';
-import Alert from '../components/common/Alert';
+import AuthCard from '../components/AuthCard';
+import InputField from '../../shared/components/InputField';
+import Button from '../../shared/components/Button';
+import Alert from '../../shared/components/Alert';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '', rememberMe: false });

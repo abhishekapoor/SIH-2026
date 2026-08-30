@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import AuthCard from '../components/auth/AuthCard';
-import StepIndicator from '../components/auth/StepIndicator';
-import BasicDetailsForm from '../components/auth/BasicDetailsForm';
-import FarmerSignupForm from '../components/auth/FarmerSignupForm';
-import BuyerSignupForm from '../components/auth/BuyerSignupForm';
-import Alert from '../components/common/Alert';
+import AuthCard from '../components/AuthCard';
+import StepIndicator from '../components/StepIndicator';
+import BasicDetailsForm from '../components/BasicDetailsForm';
+import FarmerSignupForm from '../components/FarmerSignupForm';
+import BuyerSignupForm from '../components/BuyerSignupForm';
+import Alert from '../../shared/components/Alert';
 
 const initialAccountData = {
   name: '',

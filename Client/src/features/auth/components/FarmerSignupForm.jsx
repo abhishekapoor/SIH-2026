@@ -1,8 +1,8 @@
 import { MapPin, Trees, Droplets, ShieldCheck, ArrowLeft, CheckCircle } from 'lucide-react';
-import InputField from '../common/InputField';
-import SelectField from '../common/SelectField';
-import MultiSelectTags from '../common/MultiSelectTags';
-import Button from '../common/Button';
+import InputField from '../../shared/components/InputField';
+import SelectField from '../../shared/components/SelectField';
+import MultiSelectTags from '../../shared/components/MultiSelectTags';
+import Button from '../../shared/components/Button';
 
 const landUnitOptions = [
   { value: 'Acre', label: 'Acre (एकड़)' },

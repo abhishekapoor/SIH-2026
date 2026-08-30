@@ -22,45 +22,20 @@ const userSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ['farmer', 'buyer', 'admin'],
+      enum: ['farmer', 'buyer', 'fpo', 'admin'],
       required: [true, 'Please specify a role'],
     },
-    // Farmer specific fields
-    farmerProfile: {
-      location: String,
-      landArea: Number,
-      landUnit: String,
-      ownershipType: String,
-      crops: [String],
-      irrigationType: String,
-      farmLocation: String,
-      verificationStatus: {
-        type: String,
-        default: 'Pending',
-      },
+    profileImage: {
+      type: String,
+      default: '',
     },
-    // Buyer specific fields
-    buyerProfile: {
-      businessName: String,
-      businessType: String,
-      address: String,
-      gstin: String,
-      cropsInterested: [String],
-      typicalQuantity: String,
-      qualityRequirements: String,
-      verificationDocuments: String,
-      verificationStatus: {
-        type: String,
-        default: 'Pending',
-      },
-      rating: {
-        type: Number,
-        default: 0,
-      },
-      completedOrders: {
-        type: Number,
-        default: 0,
-      },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
     },
   },
   {

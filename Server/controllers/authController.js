@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const FarmerProfile = require('../models/FarmerProfile');
+const BuyerProfile = require('../models/BuyerProfile');
 const jwt = require('jsonwebtoken');
 
 // Generate JWT
@@ -16,7 +18,7 @@ const registerUser = async (req, res) => {
     const { name, email, phone, password, role, farmerProfile, buyerProfile } = req.body;
 
     if (!name || !email || !password || !phone || !role) {
-      return res.status(400).json({ message: 'Please add all required fields (name, email, phone, password, role)' });
+      return res.status(400).json({ message: 'Please add all required fields' });
     }
 
     // Check if user exists
@@ -25,24 +27,33 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // Create user object with role-specific profiles
-    const userData = {
+    // 1. Create the identity (User)
+    const user = await User.create({
       name,
       email,
       phone,
       password,
-      role,
-    };
+      role: role.toLowerCase(),
+    });
 
-    if (role === 'farmer' && farmerProfile) {
-      userData.farmerProfile = farmerProfile;
-    } else if (role === 'buyer' && buyerProfile) {
-      userData.buyerProfile = buyerProfile;
-    }
-
-    const user = await User.create(userData);
-
+    // 2. Create the role-specific profile linked to the User
     if (user) {
+      if (user.role === 'farmer') {
+        // Build initial farmer profile from frontend data if provided
+        await FarmerProfile.create({
+          userId: user._id,
+          ...farmerProfile
+        });
+      } else if (user.role === 'buyer') {
+        // Build initial buyer profile from frontend data if provided
+        await BuyerProfile.create({
+          userId: user._id,
+          ...buyerProfile
+        });
+      }
+      
+      // If FPO or ADMIN, create respective profiles here in the future
+
       res.status(201).json({
         _id: user.id,
         name: user.name,

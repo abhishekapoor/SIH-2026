@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  --primary: #15803d;
+  --primary-hover: #166534;
+  --primary-light: #dcfce7;
+  --primary-glow: rgba(22, 163, 74, 0.25);
+  
+  --accent: #eab308;
+  --accent-light: #fef9c3;
+  --accent-dark: #ca8a04;
+
+  --secondary: #0284c7;
+  --secondary-light: #e0f2fe;
+
+  --dark-bg: #0b1320;
+  --dark-card: #132238;
+  --dark-border: #1e3557;
+
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  
+=======
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
 :root {
@@ -20,10 +47,83 @@
   --bg-surface: #ffffff;
   --bg-subtle: #f1f5f9;
 
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Agri & Trade Focus */
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --primary-dark: #14532d;
+  --primary-light: #dcfce7;
+  --primary-subtle: #f0fdf4;
+
+  --amber: #d97706;
+  --amber-hover: #b45309;
+  --amber-light: #fef3c7;
+  --amber-subtle: #fffbeb;
+
+  --accent-blue: #2563eb;
+  --accent-blue-light: #dbeafe;
+
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Agri & Trade Focus */
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --primary-dark: #14532d;
+  --primary-light: #dcfce7;
+  --primary-subtle: #f0fdf4;
+
+  --amber: #d97706;
+  --amber-hover: #b45309;
+  --amber-light: #fef3c7;
+  --amber-subtle: #fffbeb;
+
+  --accent-blue: #2563eb;
+  --accent-blue-light: #dbeafe;
+
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
   --text-main: #0f172a;
   --text-muted: #64748b;
   --text-light: #94a3b8;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.06), 0 8px 10px -6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 35px -10px rgba(0,0,0,0.1), 0 10px 15px -5px rgba(0,0,0,0.04);
+  --shadow-glow: 0 0 30px var(--primary-glow);
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+=======
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
   --border-color: #e2e8f0;
   --border-focus: #16a34a;
   --border-error: #ef4444;
@@ -49,6 +149,13 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
   --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
   --shadow-card: 0 20px 25px -5px rgb(15 23 42 / 0.06), 0 8px 10px -6px rgb(15 23 42 / 0.04);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 }
 
 * {
@@ -58,6 +165,50 @@
 }
 
 body {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+=======
   font-family: var(--font-family);
   background-color: var(--bg-main);
   color: var(--text-main);
@@ -66,6 +217,26 @@ body {
   min-height: 100vh;
 }
 
+=======
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 /* -------------------------------------------
    Layout & Containers
 ------------------------------------------- */
@@ -947,4 +1118,11 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 }

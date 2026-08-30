@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -14,12 +15,17 @@ import Signup from './pages/Signup';
 =======
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
@@ -27,6 +33,7 @@ import './App.css';
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <Router>
@@ -49,6 +56,8 @@ function App() {
 =======
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
     <AuthProvider>
       <div className="app-container">
         <Routes>
@@ -59,6 +68,9 @@ function App() {
       </div>
     </AuthProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383

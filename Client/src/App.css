@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* App & Layout Styles */
+=======
+/* App-specific utility styles */
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 /* App-specific utility styles */
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
@@ -11,6 +15,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -1253,6 +1258,8 @@ html {
     gap: 0.8rem;
     text-align: center;
   }
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======

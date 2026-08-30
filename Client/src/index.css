@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
 
 :root {
@@ -71,10 +72,35 @@
   --bg-subtle: #f1f5f9;
 
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Agri & Trade Focus */
+  --primary: #16a34a;
+  --primary-hover: #15803d;
+  --primary-dark: #14532d;
+  --primary-light: #dcfce7;
+  --primary-subtle: #f0fdf4;
+
+  --amber: #d97706;
+  --amber-hover: #b45309;
+  --amber-light: #fef3c7;
+  --amber-subtle: #fffbeb;
+
+  --accent-blue: #2563eb;
+  --accent-blue-light: #dbeafe;
+
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
   --text-main: #0f172a;
   --text-muted: #64748b;
   --text-light: #94a3b8;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   --success: #10b981;
@@ -94,6 +120,8 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 =======
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
   --border-color: #e2e8f0;
@@ -122,6 +150,9 @@
   --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
   --shadow-card: 0 20px 25px -5px rgb(15 23 42 / 0.06), 0 8px 10px -6px rgb(15 23 42 / 0.04);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
@@ -134,6 +165,7 @@
 }
 
 body {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   font-family: var(--font-sans);
@@ -185,6 +217,16 @@ button {
   min-height: 100vh;
 }
 
+=======
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
   font-family: var(--font-family);
   background-color: var(--bg-main);
@@ -1077,6 +1119,9 @@ button {
     align-items: flex-start;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 =======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383

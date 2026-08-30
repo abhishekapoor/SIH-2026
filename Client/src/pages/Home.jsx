@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -175,6 +176,8 @@ const Home = () => {
         </div>
       </section>
 =======
+=======
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
 import { useNavigate, Link } from 'react-router-dom';
 import {
   Sprout,
@@ -418,6 +421,9 @@ const Home = () => {
           </div>
         </div>
       )}
+<<<<<<< HEAD
+>>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
+=======
 >>>>>>> f9fb799ab0cd1b42ce10c1a8c3ad1722e0ae1383
     </div>
   );

@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import LiveMandiTicker from '../components/LiveMandiTicker';
-import LiveMandiSection from '../components/LiveMandiSection';
+import LiveMandiTicker from '../../../components/LiveMandiTicker';
+import LiveMandiSection from '../../../components/LiveMandiSection';
 
 const MandiLive = () => {
   return (

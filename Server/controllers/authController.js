@@ -36,29 +36,30 @@ const registerUser = async (req, res) => {
       role: role.toLowerCase(),
     });
 
+    let profileData = null;
+
     // 2. Create the role-specific profile linked to the User
     if (user) {
       if (user.role === 'farmer') {
-        // Build initial farmer profile from frontend data if provided
-        await FarmerProfile.create({
+        profileData = await FarmerProfile.create({
           userId: user._id,
           ...farmerProfile
         });
       } else if (user.role === 'buyer') {
-        // Build initial buyer profile from frontend data if provided
-        await BuyerProfile.create({
+        profileData = await BuyerProfile.create({
           userId: user._id,
           ...buyerProfile
         });
       }
-      
-      // If FPO or ADMIN, create respective profiles here in the future
 
       res.status(201).json({
         _id: user.id,
         name: user.name,
         email: user.email,
+        phone: user.phone,
         role: user.role,
+        farmerProfile: user.role === 'farmer' ? profileData : undefined,
+        buyerProfile: user.role === 'buyer' ? profileData : undefined,
         token: generateToken(user._id),
       });
     } else {
@@ -84,11 +85,22 @@ const loginUser = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (user && (await user.matchPassword(password))) {
+      
+      let profileData = null;
+      if (user.role === 'farmer') {
+        profileData = await FarmerProfile.findOne({ userId: user._id });
+      } else if (user.role === 'buyer') {
+        profileData = await BuyerProfile.findOne({ userId: user._id });
+      }
+
       res.json({
         _id: user.id,
         name: user.name,
         email: user.email,
+        phone: user.phone,
         role: user.role,
+        farmerProfile: user.role === 'farmer' ? profileData : undefined,
+        buyerProfile: user.role === 'buyer' ? profileData : undefined,
         token: generateToken(user._id),
       });
     } else {

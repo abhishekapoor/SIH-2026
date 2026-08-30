@@ -12,9 +12,55 @@ const userSchema = new mongoose.Schema(
       required: [true, 'Please add an email'],
       unique: true,
     },
+    phone: {
+      type: String,
+      required: [true, 'Please add a phone number'],
+    },
     password: {
       type: String,
       required: [true, 'Please add a password'],
+    },
+    role: {
+      type: String,
+      enum: ['farmer', 'buyer', 'admin'],
+      required: [true, 'Please specify a role'],
+    },
+    // Farmer specific fields
+    farmerProfile: {
+      location: String,
+      landArea: Number,
+      landUnit: String,
+      ownershipType: String,
+      crops: [String],
+      irrigationType: String,
+      farmLocation: String,
+      verificationStatus: {
+        type: String,
+        default: 'Pending',
+      },
+    },
+    // Buyer specific fields
+    buyerProfile: {
+      businessName: String,
+      businessType: String,
+      address: String,
+      gstin: String,
+      cropsInterested: [String],
+      typicalQuantity: String,
+      qualityRequirements: String,
+      verificationDocuments: String,
+      verificationStatus: {
+        type: String,
+        default: 'Pending',
+      },
+      rating: {
+        type: Number,
+        default: 0,
+      },
+      completedOrders: {
+        type: Number,
+        default: 0,
+      },
     },
   },
   {

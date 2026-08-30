@@ -13,10 +13,10 @@ const generateToken = (id) => {
 // @access  Public
 const registerUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, phone, password, role, farmerProfile, buyerProfile } = req.body;
 
-    if (!name || !email || !password) {
-      return res.status(400).json({ message: 'Please add all fields' });
+    if (!name || !email || !password || !phone || !role) {
+      return res.status(400).json({ message: 'Please add all required fields (name, email, phone, password, role)' });
     }
 
     // Check if user exists
@@ -25,18 +25,29 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // Create user
-    const user = await User.create({
+    // Create user object with role-specific profiles
+    const userData = {
       name,
       email,
+      phone,
       password,
-    });
+      role,
+    };
+
+    if (role === 'farmer' && farmerProfile) {
+      userData.farmerProfile = farmerProfile;
+    } else if (role === 'buyer' && buyerProfile) {
+      userData.buyerProfile = buyerProfile;
+    }
+
+    const user = await User.create(userData);
 
     if (user) {
       res.status(201).json({
         _id: user.id,
         name: user.name,
         email: user.email,
+        role: user.role,
         token: generateToken(user._id),
       });
     } else {
@@ -66,6 +77,7 @@ const loginUser = async (req, res) => {
         _id: user.id,
         name: user.name,
         email: user.email,
+        role: user.role,
         token: generateToken(user._id),
       });
     } else {

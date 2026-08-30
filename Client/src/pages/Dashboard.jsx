@@ -17,49 +17,18 @@ import {
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/common/Button';
 
-const Home = () => {
+const Dashboard = () => {
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
-  };
-
-  const isFarmer = user?.role === 'farmer' || !!user?.farmerProfile;
-  const isBuyer = user?.role === 'buyer' || !!user?.buyerProfile;
+  const isFarmer = user?.role === 'farmer';
+  const isBuyer = user?.role === 'buyer';
   const farmerProfile = user?.farmerProfile;
   const buyerProfile = user?.buyerProfile;
 
   return (
     <div className="dashboard-container">
-      {/* Brand Top Bar */}
-      <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <div className="brand-badge">
-            <Sprout size={24} />
-          </div>
-          <div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 800, margin: 0 }}>KrishiConnect</h2>
-            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0 }}>Smart India Hackathon Portal</p>
-          </div>
-        </div>
 
-        {isAuthenticated ? (
-          <Button variant="outline" size="sm" onClick={handleLogout} icon={LogOut}>
-            Sign Out
-          </Button>
-        ) : (
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <Button variant="outline" size="sm" onClick={() => navigate('/login')} icon={LogIn}>
-              Sign In
-            </Button>
-            <Button variant="primary" size="sm" onClick={() => navigate('/signup')} icon={UserPlus}>
-              Register
-            </Button>
-          </div>
-        )}
-      </header>
 
       {isAuthenticated && user ? (
         <div className="dashboard-card">
@@ -245,4 +214,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
